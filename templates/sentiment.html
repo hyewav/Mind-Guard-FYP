@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindGuard</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" href="static/img/icon.png" sizes="32x32" type="icon.png">
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <header>
+        <a href="#home"><img class="image" src="static/img/icon.png"></a><h2 class="logo">MindGuard</h2>
+        <nav class="navigation">
+            <a href="/">Home</a>
+            <a href="/">PHQ-9 Based Test</a>
+            <a href="#sentiment" class="active">Sentiment Based Test</a>
+        </nav>
+    </header>
+
+    <section class="parallax">
+        <img src="static/img/hill1.png" id="hill1">
+        <img src="static/img/hill2.png" id="hill2">
+        <img src="static/img/hill3.png" id="hill3">
+        <img src="static/img/hill4.png" id="hill4">
+        <img src="static/img/hill5.png" id="hill5">
+        <img src="static/img/tree.png" id="tree">
+        <img src="static/img/leaf.png" id="leaf">
+        <h2 id="text" style="text-align: center;">Welcome to Sentiment Insight<br> – Your Personal Mental Health Assessment</h2>
+        <img src="static/img/plant.png" id="plant">
+    </section>
+
+    <form action="/predictSentiment" method="POST">
+      <section id="sentiment" class="sec">
+        <h2>Take a Test</h2>
+        <p>Write something about how do you feel.</p>
+        <i class="fa-solid fa-pencil"></i>
+        <form action="/predictSentiment" method="POST">
+          <div class="container">
+            <textarea class="form-control" required="required" id="form10" name="form10" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">See Result</button>
+        </form>
+      </section>
+    </form>
+
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>

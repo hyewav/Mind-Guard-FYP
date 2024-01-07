@@ -1,0 +1,70 @@
+.serviceBox{
+    color: #f67d4a;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 55px 20px 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.serviceBox:before,
+.serviceBox:after{
+    content: "";
+    background: #f67d4a;
+    height: 45px;
+    width: 100%;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.3) inset;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.serviceBox:after{
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3) inset;
+    top: auto;
+    bottom: 0;
+}
+
+.serviceBox .service-icon{
+    font-size: 40px;
+    margin: 0 0 10px;
+} 
+
+.serviceBox .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+
+.serviceBox .description{
+    color: #777;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.serviceBox.pink{ color: #EC6D9E; }
+.serviceBox.pink:before,
+.serviceBox.pink:after{
+    background-color: #EC6D9E;
+}
+
+.serviceBox.purple{ color: #8672B9; }
+.serviceBox.purple:before,
+.serviceBox.purple:after{
+    background-color: #8672B9;
+}
+
+.serviceBox.blue{ color: #5196EC; }
+.serviceBox.blue:before,
+.serviceBox.blue:after{
+    background-color: #5196EC;
+}
+
+@media only screen and (max-width: 990px){
+    .serviceBox{ margin: 0 0 30px; }
+}

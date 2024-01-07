@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindGuard</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" href="static/img/icon.png" sizes="32x32" type="icon.png">
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <header>
+        <a href="/"><img class="image" src="static/img/icon.png"></a><h2 class="logo">MindGuard</h2>
+        <nav class="navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#phq9">PHQ-9 Based Test</a>
+            <a href="/sentiment">Sentiment Based Test</a>
+        </nav>
+    </header>
+
+    <section class="parallax">
+      <img src="static/img/hill1.png">
+      <img src="static/img/hill2.png">
+      <img src="static/img/hill3.png">
+      <img src="static/img/hill4.png">
+      <img src="static/img/hill5.png">
+      <img src="static/img/tree.png">
+      <img src="static/img/leaf.png">
+      {% block code_block %}<h1 id="text" style="text-align: center;">{{result}}</h1>{% endblock %}
+      <!-- <p>This test is based on the Mental Health Screening Test based on PHQ9</p> -->
+      <img src="static/img/plant.png">
+    </section>
+
+    <script src="static/js/script.js"></script>
+
+</body>
+</html>

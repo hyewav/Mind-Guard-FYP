@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindGuard</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" href="static/img/icon.png" sizes="32x32" type="icon.png">
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <header>
+        <a href="#home"><img class="image" src="static/img/icon.png"></a><h2 class="logo">MindGuard</h2>
+        <nav class="navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#phq9">PHQ-9 Based Test</a>
+            <a href="/sentiment">Sentiment Based Test</a>
+        </nav>
+    </header>
+
+    <section class="parallax">
+        <img src="static/img/hill1.png" id="hill1">
+        <img src="static/img/hill2.png" id="hill2">
+        <img src="static/img/hill3.png" id="hill3">
+        <img src="static/img/hill4.png" id="hill4">
+        <img src="static/img/hill5.png" id="hill5">
+        <img src="static/img/tree.png" id="tree">
+        <img src="static/img/leaf.png" id="leaf">
+        <h2 id="text" style="text-align: center;">Welcome to Mind Guard<br> – Your Personal Mental Health Assessment</h2>
+        <img src="static/img/plant.png" id="plant">
+    </section>
+
+    <form action="/predict" method="POST">
+        <section id="phq9" class="sec">
+            <h2>Take a test</h2>
+            <p>Instructions: Beside is a list of questions that relate to life experiences common among people who have been diagnosed with depression. Please read each question carefully, and indicate how often you have experienced the same or similar challenges in the past few months.</p>
+            <br>
+            <div class="container">
+                <div class="left-side">
+                    <h4>Little interest or pleasure in doing things</h4>
+                    <ul class="list-group">
+                        <li>
+                        <div>
+                            <input type="radio" id="a10" name="a1" value="0" required="required">
+                            <label style="color: white;" for="a10">Not at all.</label>
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <input type="radio" id="a11" name="a1" value="1" required="required">
+                            <label style="color: white;" for="a11">Several days.</label>
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <input type="radio" id="a12" name="a1" value="2" required="required">
+                            <label style="color: white;" for="a12">More than half the days.</label>
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <input type="radio" id="a13" name="a1" value="3" required="required">
+                            <label style="color: white;" for="a13">Nearly every day.</label>
+                        </div>
+                        </li>
+                        <br>
+                    </ul>
+                    <h4>Feeling down, depressed, or hopeless</h4>
+                    <ul class="list-group">
+                      <li>
+                        <div>
+                            <input type="radio" id="a20" name="a2" value="0" required="required">
+                            <label style="color: white;" for="a20">Not at all.</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                            <input type="radio" id="a21" name="a2" value="1" required="required">
+                            <label style="color: white;" for="a21">Several days.</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                            <input type="radio" id="a22" name="a2" value="2" required="required">
+                            <label style="color: white;" for="a22">More than half the days.</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                            <input type="radio" id="a23" name="a2" value="3" required="required">
+                            <label style="color: white;" for="a23">Nearly every day.</label>
+                        </div>
+                      </li>
+                      <br>
+                    </ul>
+                    <h4>Trouble falling or staying asleep, or sleeping too much</h4>
+                    <ul class="list-group">
+                        <li>
+                            <div>
+                            <input type="radio" id="a30" name="a3" value="0" required="required">
+                            <label style="color: white;" for="a30">Not at all.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a31" name="a3" value="1" required="required">
+                            <label style="color: white;" for="a31">Several days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a32" name="a3" value="2" required="required">
+                            <label style="color: white;" for="a32">More than half the days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a33" name="a3" value="3" required="required">
+                            <label style="color: white;" for="a33">Nearly every day.</label>
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
+                    <h4>Feeling tired or having little energy</h4>
+                    <ul class="list-group">
+                        <li>
+                            <div>
+                            <input type="radio" id="a40" name="a4" value="0" required="required">
+                            <label style="color: white;" for="a40">Not at all.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a41" name="a4" value="1" required="required">
+                            <label style="color: white;" for="a41">Several days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a42" name="a4" value="2" required="required">
+                            <label style="color: white;" for="a42">More than half the days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a43" name="a4" value="3" required="required">
+                            <label style="color: white;" for="a43">Nearly every day.</label>
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
+                    <h4>Poor appetite or overeating</h4>
+                    <ul class="list-group">
+                        <li>
+                        <div>
+                            <input type="radio" id="a50" name="a5" value="0" required="required">
+                            <label style="color: white;" for="a50">Not at all.</label>
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <input type="radio" id="a51" name="a5" value="1" required="required">
+                            <label style="color: white;" for="a51">Several days.</label>
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <input type="radio" id="a52" name="a5" value="2" required="required">
+                            <label style="color: white;" for="a52">More than half the days.</label>
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <input type="radio" id="a53" name="a5" value="3" required="required">
+                            <label style="color: white;" for="a53">Nearly every day.</label>
+                        </div>
+                        </li>
+                        <br>
+                    </ul>
+                </div>
+                <div class="right-side">
+                    <h4>Feeling bad about yourself - or that you are a failure or have let yourself or your family down</h4>
+                    <ul class="list-group">
+                        <li>
+                            <div>
+                            <input type="radio" id="a60" name="a6" value="0" required="required">
+                            <label style="color: white;" for="a60">Not at all.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a61" name="a6" value="1" required="required">
+                            <label style="color: white;" for="a61">Several days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a62" name="a6" value="2" required="required">
+                            <label style="color: white;" for="a62">More than half the days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a63" name="a6" value="3" required="required">
+                            <label style="color: white;" for="a63">Nearly every day.</label>
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
+                    <h4>Trouble concentrating on things, such as reading the newspaper or watching television</h4>
+                    <ul class="list-group">
+                        <li>
+                            <div>
+                            <input type="radio" id="a70" name="a7" value="0" required="required">
+                            <label style="color: white;" for="a70">Not at all.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a71" name="a7" value="1" required="required">
+                            <label style="color: white;" for="a71">Several days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a72" name="a7" value="2" required="required">
+                            <label style="color: white;" for="a72">More than half the days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a73" name="a7" value="3" required="required">
+                            <label style="color: white;" for="a73">Nearly every day.</label>
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
+                    <h4>Moving or speaking so slowly that other people could have noticed</h4>
+                    <ul class="list-group">
+                        <li>
+                            <div>
+                            <input type="radio" id="a80" name="a8" value="0" required="required">
+                            <label style="color: white;" for="a80">Not at all.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a81" name="a8" value="1" required="required">
+                            <label style="color: white;" for="a81">Several days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a82" name="a8" value="2" required="required">
+                            <label style="color: white;" for="a82">More than half the days.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a83" name="a8" value="3" required="required">
+                            <label style="color: white;" for="a83">Nearly every day.</label>
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
+                    <h4>If you've had any days with issues above, how difficult have these problems made it for you at work, home, school, or with other people?</h4>
+                    <ul class="list-group">
+                        <li>
+                            <div>
+                            <input type="radio" id="a90" name="a9" value="0" required="required">
+                            <label style="color: white;" for="a90">Not difficult at all.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a91" name="a9" value="1" required="required">
+                            <label style="color: white;" for="a91">Somewhat difficult.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a92" name="a9" value="2" required="required">
+                            <label style="color: white;" for="a92">Very difficult.</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                            <input type="radio" id="a93" name="a9" value="3" required="required">
+                            <label style="color: white;" for="a93">Extremely difficult.</label>
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
+                    <button type="submit" class="btn btn-primary">See Results</button>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
