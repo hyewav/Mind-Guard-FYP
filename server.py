@@ -1,6 +1,6 @@
-from flask import Flask, request, render_template,jsonify
+from flask import Flask, request, render_template
 from Phq9Model import Phq9Model
-from sentimentModel import SentimentModel  # Import the SentimentModel class
+from sentimentModel import SentimentModel 
 import os 
 
 app = Flask(__name__)
@@ -24,7 +24,7 @@ def predictSentiment():
 
 @app.route('/predict', methods=["POST"])
 def predict():
-    q1 = int(request.form['a1']) 
+    q1 = int(request.form['a1'])
     q2 = int(request.form['a2'])
     q3 = int(request.form['a3'])
     q4 = int(request.form['a4'])
